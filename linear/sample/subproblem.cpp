@@ -75,7 +75,7 @@ tuple<double, bool, bool> solve_subproblem(const vector<bool>& b, const vector<d
 	NumberVector x_u(n);
 	x_l[0] = -20.0;	 x_u[0] = 50.0;
 	for (i = n_x; i < n; ++i) {
-		x_l[i] = 0.0; 	x_u[i] = 1.0e19;
+		x_l[i] = 0.0;	x_u[i] = 1.0e19;
 	}
 
 
@@ -110,7 +110,7 @@ tuple<double, bool, bool> solve_subproblem(const vector<bool>& b, const vector<d
 	ok    &= status == Ipopt::Solve_Succeeded;
 	// Run the IpoptApplication
 	status = app->OptimizeTNLP(cppad_nlp);
-	ok    &= status = Ipopt::Solve_Succeeded;
+	ok    &= status == Ipopt::Solve_Succeeded;
 	ok    &= s.status == cppad_ipopt_solution::success;
 
 	for (i = 0; i < n_x; ++i)
