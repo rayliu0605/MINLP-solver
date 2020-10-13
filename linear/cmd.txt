@@ -1,0 +1,3 @@
+g++ -o exec solver.cpp model.cpp subproblem.cpp ../src/cppad_ipopt_nlp.cpp ../src/hes_fg_map.cpp ../src/jac_g_map.cpp ../src/sparse_map2vec.cpp ../src/vec_fun_pattern.cpp -I/opt/include -L/opt/lib -lipopt -lpthread
+
+g++ -o exec solver.cpp model.cpp subproblem.cpp ~/cppad/cppad_ipopt/src/cppad_ipopt_nlp.cpp ~/cppad/cppad_ipopt/src/hes_fg_map.cpp ~/cppad/cppad_ipopt/src/jac_g_map.cpp ~/cppad/cppad_ipopt/src/sparse_map2vec.cpp ~/cppad/cppad_ipopt/src/vec_fun_pattern.cpp -I/opt/include -L/opt/lib -lipopt -lpthread
